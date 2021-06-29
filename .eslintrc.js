@@ -18,6 +18,7 @@ module.exports = {
     'space-before-function-paren': ['error', 'never'],
     // 缩进规范（两个空格，一倍缩进）
     'vue/script-indent': ['error', 2, {'baseIndent': 1}],
+    'no-trailing-spaces': ["error", { "skipBlankLines": true }]
   },
   overrides: [
     {
