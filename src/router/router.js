@@ -4,6 +4,8 @@ import Login from '../components/Login'
 import Home from '../components/Home'
 import Welcome from '../components/Welcome'
 import Users from '../components/User/Users'
+import Rights from '../components/power/Rights'
+import Roles from '../components/power/Roles'
 
 Vue.use(VueRouter)
 
@@ -13,7 +15,7 @@ const router = new VueRouter({
     { path: '/', redirect: '/login' },
     // 登录路由
     { path: '/login', component: Login },
-    { path: '/home', component: Home, redirect: '/welcome', children: [{ path: '/Welcome', component: Welcome }, { path: '/users', component: Users }] }
+    { path: '/home', component: Home, redirect: '/welcome', children: [{ path: '/Welcome', component: Welcome }, { path: '/users', component: Users }, { path: '/rights', component: Rights }, { path: '/roles', component: Roles }] }
   ]
 })
 
