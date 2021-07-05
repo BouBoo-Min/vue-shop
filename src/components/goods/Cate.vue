@@ -56,7 +56,7 @@
           <!-- props 用来指定配置对象 -->
           <!--expandTrigger='hover'(鼠标悬停触发级联) v-model(设置级联菜单绑定数据) :options(指定级联菜单数据源)  :props(用来配置数据显示的规则)
           clearable(提供“X”号完成删除文本功能) change-on-select(是否可以选中任意一级的菜单)-->
-          <el-cascader expand-trigger="hover" :options="parentCateList" :props="cascaderProps" v-model="selectedKeys" @change="parentCateChanged" clearable change-on-select>
+          <el-cascader props.expandTrigger="hover" :options="parentCateList" :props="cascaderProps" v-model="selectedKeys" @change="parentCateChanged" clearable props.checkStrictly>
           </el-cascader>
         </el-form-item>
       </el-form>

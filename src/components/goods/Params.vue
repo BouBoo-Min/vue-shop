@@ -19,13 +19,13 @@
           <el-col>
             <span>选择商品分类：</span>
             <!-- 选择商品分类的级联选择框  el-cascader-->
-                <!--expand-trigger="hover" 次级菜单的展开方式-->
+                <!--expandTrigger="hover" 次级菜单的展开方式-->
                 <!-- :options="catelist" 指定数据源-->
                 <!-- :props="cateProps" 用来指定配置对象-->
                 <!-- v-model="selectedCateKeys" 选中的父级分类的Id数组-->
                 <!-- change :当选中改变时触发的事件-->
                 <!-- clearable 清空选择-->
-            <el-cascader expand-trigger="hover" :options="catelist" :props="cateProps" v-model="selectedCateKeys" @change="handleChange" clearable></el-cascader>
+            <el-cascader :options="catelist" :props="cateProps" v-model="selectedCateKeys" @change="handleChange" clearable></el-cascader>
           </el-col>
         </el-row>
 
@@ -146,7 +146,8 @@
         cateProps: {
           value: 'cat_id',
           label: 'cat_name',
-          children: 'children'
+          children: 'children',
+          expandTrigger: 'hover'
         },
         // 级联选择框双向绑定到的数组
         selectedCateKeys: [],
