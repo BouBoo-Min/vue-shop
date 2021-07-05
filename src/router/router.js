@@ -10,6 +10,7 @@ import Cate from '../components/goods/Cate'
 import Params from '../components/goods/Params'
 import List from '../components/goods/List'
 import Add from '../components/goods/Add'
+import Order from '../components/order/order'
 
 Vue.use(VueRouter)
 
@@ -19,7 +20,7 @@ const router = new VueRouter({
     { path: '/', redirect: '/login' },
     // 登录路由
     { path: '/login', component: Login },
-    { path: '/home', component: Home, redirect: '/welcome', children: [{ path: '/Welcome', component: Welcome }, { path: '/users', component: Users }, { path: '/rights', component: Rights }, { path: '/roles', component: Roles }, { path: '/categories', component: Cate }, { path: '/params', component: Params }, { path: '/goods', component: List }, { path: '/goods/add', component: Add }] }
+    { path: '/home', component: Home, redirect: '/welcome', children: [{ path: '/Welcome', component: Welcome }, { path: '/users', component: Users }, { path: '/rights', component: Rights }, { path: '/roles', component: Roles }, { path: '/categories', component: Cate }, { path: '/params', component: Params }, { path: '/goods', component: List }, { path: '/goods/add', component: Add }, { path: '/orders', component: Order }] }
   ]
 })
 
