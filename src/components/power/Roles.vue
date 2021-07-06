@@ -17,7 +17,7 @@
         </el-row>
 
         <!-- 角色列表区域 -->
-        <el-table :data="roleslist" border stripe>
+        <el-table :data="roleslist" border stripe row-key="id">
           <!-- 展开列 -->
           <!--加上type=expand即可-->
           <el-table-column type="expand">
@@ -41,7 +41,7 @@
                       <i class="el-icon-caret-right"></i>
                     </el-col>
                     <el-col :span="18">
-                      <el-tag type="warning" v-for="(item3) in item2.children" :key="item3.id" closable @close="removeRightById(scope.row, item3.id)">
+                      <el-tag type="warning" v-for="item3 in item2.children" :key="item3.id" closable @close="removeRightById(scope.row, item3.id)">
                         {{item3.authName}}
                       </el-tag>
                     </el-col>
